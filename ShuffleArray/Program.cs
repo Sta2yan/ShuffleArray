@@ -13,18 +13,12 @@ namespace ShuffleArray
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
             Console.WriteLine("Массив до перемешивания:");
-            foreach (int number in numbers)
-            {
-                Console.Write(number + " ");
-            }
+            ShowArray(numbers);
 
             Shuffle(numbers);
 
             Console.WriteLine("\nМассив после перемешивания:");
-            foreach (int number in numbers)
-            {
-                Console.Write(number + " ");
-            }
+            ShowArray(numbers);
         }
 
         static void Shuffle(int[] numberArray)
@@ -44,5 +38,13 @@ namespace ShuffleArray
                 }
             }
         }
-    }
+
+        static void ShowArray(int[] array)
+        {
+            foreach (int number in array)
+            {
+                Console.Write(number + " ");
+            }
+        }
+}
 }
